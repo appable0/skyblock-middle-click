@@ -1,0 +1,11 @@
+{
+  "package": "com.ambient.mixin",
+  "refmap": "mixins.ambient.refmap.json",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+	"MixinPlayerControllerMP"
+  ]
+}

@@ -2,10 +2,10 @@
 
 **For other templates, do check out the [other branches of this repository](https://github.com/romangraef/Forge1.8.9Template/branches/all)**
 
-To get started, clone this repository and replace all references to `examplemod` or `com.example` with your own names.
+To get started, clone this repository and replace all references to `examplemod` or `com.ambient` with your own names.
 
 If you don't want mixins (which allow for modifying vanilla code), then you can remove the references to mixins from
-the `build.gradle.kts`, delete the `mixins.examplemod.json` and the `com.example.mixin` package.
+the `build.gradle.kts`, delete the `mixins.examplemod.json` and the `com.ambient.mixin` package.
 
 This project uses [DevAuth](https://github.com/DJtheRedstoner/DevAuth) per default, so you can log in using your real
 minecraft account. If you don't need that, you can remove it from the buildscript.
