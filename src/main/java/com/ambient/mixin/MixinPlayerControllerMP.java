@@ -21,8 +21,8 @@ public abstract class MixinPlayerControllerMP {
      */
     @Overwrite
     public ItemStack windowClick(int windowId, int slotId, int mouseButtonClicked, int mode, EntityPlayer playerIn) {
-        int updatedButton = mode != 3 ? mouseButtonClicked : 2;
-        int updatedMode = mouseButtonClicked != 2 ? mode : 3;
+        int updatedButton = (mode == 3) ? 2 : mouseButtonClicked;
+        int updatedMode = (mouseButtonClicked == 2 && (mode == 0 || mode == 1)) ? 3 : mode;
         short short1 = playerIn.openContainer.getNextTransactionID(playerIn.inventory);
         ItemStack itemstack = playerIn.openContainer.slotClick(slotId, updatedButton, updatedMode, playerIn);
         this.netClientHandler.addToSendQueue(new C0EPacketClickWindow(windowId, slotId, updatedButton, updatedMode, itemstack, short1));
